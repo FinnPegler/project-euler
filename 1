@@ -1,0 +1,69 @@
+#project1
+n = 0
+total = 0
+while n < 1000:
+	if n % 3 == 0 or n % 5 == 0:
+		total = total + n
+	n += 1
+print total
+
+
+
+
+
+
+#project2
+a = 1
+b = 2
+n = 2
+total = 2
+
+while n < 4000000:
+	n = a + b
+	if n % 2 == 0:
+		total += n
+	a = b
+	b = n
+  
+print total
+
+
+
+
+
+#working prime check:
+n = 13
+checklist = [n]
+for i in range(2, n):
+	if n % i == 0:
+		checklist.append(n/i)
+if len(checklist) == 1:
+    print "prime!"
+    
+    
+#project3    
+n = 1
+factors= []
+checklist = []
+primefactors = []
+while n < 876260000:
+	if 600851475143 % n == 0:
+		yes = n
+		print yes
+		factors.append(yes)
+	n += 1
+print factors
+
+
+for j in factors:
+	checklist = [j]
+	for i in range(2, j):
+		if j % i == 0:
+			checklist.append(j/i)
+	if len(checklist) == 1:
+		primefactors.append(checklist)
+
+
+print primefactors
+print max(primefactors)    
+    
