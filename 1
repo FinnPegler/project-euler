@@ -46,7 +46,7 @@ while len(factors) < 10:
 
 for j in factors:
     checklist = [j]
-    for i in range(2, j):
+    for i in range(3, j/3, 2):
         if j % i == 0:
             checklist.append(j/i)
     if len(checklist) == 1:
@@ -54,4 +54,4 @@ for j in factors:
 
 print "All factors of %s are %s" % (x,factors)
 print "The prime factors are %s" % (primefactors)
-print "The highest prime factor is %s" % (max(primefactors)) 
+print "The highest prime factor is %s" % (max(primefactors))  
