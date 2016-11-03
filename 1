@@ -28,32 +28,20 @@ while n < 4000000:
 print total
 
 
-
-
-
-#working prime check:
-n = 13
-checklist = [n]
-for i in range(2, n):
-	if n % i == 0:
-		checklist.append(n/i)
-if len(checklist) == 1:
-    print "prime!"
     
-    
-#project3.1 (Too Slow!)    
+#project3.1
 n = 1
 x = int(raw_input("What is the number you would like to find largest prime factor of?"))
 factors= []
 checklist = []
 primefactors = []
-while n < (x+1)/2:
+while len(factors) < 10:
     if x % n == 0:
         yes = n
         print yes
         factors.append(yes)
-        if n % 1000000000 == 0:
-            print "running n count = %s" % (n)
+        #if n % 1000000000 == 0:
+            #print "running n count = %s" % (n)
     n += 1
 
 for j in factors:
@@ -66,5 +54,4 @@ for j in factors:
 
 print "All factors of %s are %s" % (x,factors)
 print "The prime factors are %s" % (primefactors)
-print "The highest prime factor is %s" % (max(primefactors))  
-    
+print "The highest prime factor is %s" % (max(primefactors)) 
